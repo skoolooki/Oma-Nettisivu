@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lämpöstyle.css">
+</head>
+<body>
+    <h1>Lämpötilamuunnin</h1>
+
+    <select id="myList" onchange="testi(document.getElementById('tekst').value)">
+        <option value="cTOf" id="cTOf">Celsius -> Fahrenheit</option>
+        <option value="cTOk" id="cTOk">Celsius -> Kelvin</option>
+        <option value="fTOc" id="fTOc">Fahrenheit -> Celsius</option>
+        <option value="fTOk" id="fTOk">Fahrenheit -> Kelvin</option>
+        <option value="kTOc" id="kTOc">Kelvin -> Celsius</option>
+        <option value="kTOf" id="kTOf">Kelvin -> Fahrenheit</option>
+    </select>
+    <p>Syötä Lämpötila:</p>
+
+    <input type="number" id="tekst" oninput="testi(this.value)">
+
+    
+    <p>Vastaus: <span id="vastaus">32</span></p>
+
+</body>
+    <script src="lämpökoodi.js"></script>
+</html>
