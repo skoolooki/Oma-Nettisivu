@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cookiestyle.css">
+</head>
+<body>
+
+
+    <div class="shopcontainer">
+        <div class="overlay" id="overlay1">
+            <p class="shoptext">2X Cookies</p>
+            <p class="text2">You will gain 2x more cookies from clicking</p>
+            <p class="text2">Cost: 200 <span class="warning" id="warning1">Not enough!</span> <span class="bought" id="bought1">Bought!</span></p>
+        </div>
+        <div class="overlay" id="overlay2">
+            <p class="shoptext">Autofarm</p>
+            <p class="text2">You will gain 1 cookie automaticly every 0.5 seconds</p>
+            <p class="text2">Cost: 300 <span class="warning" id="warning2">Not enough!</span> <span style="display: none;" class="bought" id="bought2">Bought!</span></p> 
+        </div>
+        <div class="overlay" id="overlay3">
+            <p class="shoptext">Jotain</p>
+        </div>
+    </div>
+        <center>
+            <div class="cookiediv">
+                <img src="cookie.png"  onclick="lisaa(document.getElementById('number').innerHTML)" class="cookie">
+            </div>
+
+            <p>Cookies: <span id="number">0</span></p> 
+            <a href=""></a>
+            <div class="container">
+                <div class="div-item1">
+                    <button class="button" onmouseover="overitem1()" onmouseout="outitem1()" onclick="buyitem1(parseInt(document.getElementById('number').innerHTML))">Osta</button>
+                </div>
+                <div class="div-item2">
+                    <button class="button" onmouseover="overitem2()" onmouseout="outitem2()" onclick="buyitem2(parseInt(document.getElementById('number').innerHTML))">Osta</button>
+                </div>
+            </div>
+        </center>
+    </div>
+    <script src="cookiekoodi.js"></script>
+</body>
+</html>

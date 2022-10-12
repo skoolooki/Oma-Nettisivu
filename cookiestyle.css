@@ -1,0 +1,114 @@
+
+body {
+    background-color: #f7c27e;
+}
+
+
+/* Button */
+.button {
+    cursor: pointer;
+    background-color: #f7c27e;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px 30px;
+    transition-duration: 0.4s;
+    font-family: monospace;
+}
+
+.button:active {
+    font-size: 25px;
+}
+
+.button:hover {
+    background-color: #f0ece8;
+}
+
+p {
+    font-size: 50px;
+    font-family: monospace;
+}
+
+/* Cookie */
+
+.cookie {
+    cursor: pointer;
+    width: 400px;
+    height: 400px;
+    transition-duration: 0.2s;
+}
+
+.cookie:active{
+    width: 410px;
+    height: 410px;
+}
+
+.cookiediv {
+    width: 410px;
+    height: 410px;
+}
+
+/* Shop */
+.container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #b68150;
+    padding: 10px;
+    width: 50%;
+  }
+.div-item1 {
+    text-align: center;
+}
+
+/* Menu */
+
+.shopcontainer {
+    position: absolute;
+    width: 25%;
+    height: 55%;
+}
+
+.warning {
+    color: red;
+    font-size: 30px;
+    overflow: hidden;
+    white-space: nowrap; 
+    display: none;
+}
+
+.bought {
+    color: green;
+    font-size: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: none;
+}
+
+.shoptext {
+    overflow: hidden;
+    white-space: nowrap; 
+    margin-left: 50px;
+}
+
+.text2 {
+    font-size: 30px;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #a37734;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+/* .shopcontainer:hover .overlay {
+    width: 100%;
+} */
+
+
