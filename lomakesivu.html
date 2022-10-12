@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lomakestyle.css">
+</head>
+<body>
+    <h1>Rekisteröitymislomake</h1>
+    <div class="container">
+        <p>Kaikki kentät paitsi Lisätietoja ovat pakollisia</p>
+        <p>Käyttäjä ID pitää olla vähintään 6 merkkiä pitkä</p>
+        <p>Postinumerossa pitää olla 5 numeroa</p>
+        <p>Sähköpostiosoitteen tulee olla sähköpostiosoitteen muotoinen</p>
+        <div class="row">
+            <div class="col-15">
+                <label>Käyttäjä ID:</label>
+            </div>
+            <div class="col-85">
+                <input onblur="IDtesti(this.value)" type="text" placeholder="ID..." id="ID" required> <span class="error" id="virhe"> Pitää olla vähintään 6 merkkiä pitkä!</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                <label for="salasana">Salasana:</label>
+            </div>
+            <div class="col-85">
+                <input onblur="tyhja(this.value, document.getElementById('salasanavirhe'))" type="text" placeholder="Salasanasi..." id="salasana" required> <span class="error" id="salasanavirhe"> Tämä kenttä pitää täyttää</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                <label for="nimi">Nimi:</label>
+            </div>
+            <div class="col-85">
+                <input onblur="tyhja(this.value, document.getElementById('nimivirhe'))" type="text" placeholder="Nimesi..." id="nimi" style="width: 20%;" required> <span class="error" id="nimivirhe"> Tämä kenttä pitää täyttää!</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                <label for="osoite">Osoite:</label>
+            </div>
+            <div class="col-85">
+                <input onblur="tyhja(this.value, document.getElementById('osoitevirhe'))" type="text" placeholder="Osoite..." id="osoite" style="width: 20%;"required> <span class="error" id="osoitevirhe"> Tämä kenttä pitää täyttää!</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+              <label for="maa">Maa:</label>
+            </div>
+            <div class="col-85">
+              <select id="maa" required>
+                <option value="australia">Suomi</option>
+                <option value="canada">Venäjä</option>
+                <option value="usa">Ruotsi</option>
+              </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                <label for="postinumero">Postinumero:</label>
+            </div>
+            <div class="col-85">
+                <input onblur="postinumero(this.value, document.getElementById('postivirhe'))" type="number" placeholder="Postinumero..." id="postinumero" required> <span class="error" id="postivirhe"> Postinumerossa pitää olla 5 numeroa</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                <label>Sähköposti</label>
+            </div>
+            <div class="col-85">
+                <input onblur="gmail(this.value, document.getElementById('gmailvirhe'))" type="text" placeholder="Sähköposti..." style="width: 20%;" name="sahkoposti" id="sähköposti"> <span class="error" name="" id="gmailvirhe"> Sähköpostiosoitteen tulee olla sähköpostiosoitteen muotoinen</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                <label for="sukupuoli">Sukupuoli:</label>
+            </div>
+            <div class="col-85">
+                <label class="box">
+                    <input name="suku" type="radio" id="mies" required>
+                    <span class="checkmark"></span>
+                    Mies
+                </label>
+                <label class="box">
+                    <input name="suku" type="radio" id="nainen" required>
+                    <span class="checkmark"></span>
+                    Nainen
+                </label> <span class="error" id="sukuvirhe"> Valitse sukupuoli</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                <label for="kieli">Kieli:</label>
+            </div>
+            <div class="col-85">
+                <input type="radio" name="kieli" id="suomi" value="suomi" required><label>Suomi</label></input>
+                <input type="radio" name="kieli" id="muu" value="muu" required><label>Joku muu</label></input> <span class="error" id="kielivirhe"> Valitse kieli</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+              <label for="subject">Lisätietoja</label>
+            </div>
+            <div class="col-85">
+              <textarea id="subject" name="subject" placeholder="Kirjoita Jotain..." style="width:300px ; height: 150px;"></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <input onclick="submit(document.getElementById('sukuvirhe'), document.getElementById('kielivirhe'))" type="submit" id="submit" value="Lähetä">
+        </div>  
+    </div>
+    <script src="lomakekoodi.js"></script>
+</body>
+</html>
