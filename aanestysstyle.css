@@ -1,0 +1,112 @@
+.login {
+    padding: 10px;
+    background-color: rgb(63, 41, 90);
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    height: 200px;
+    border-radius: 10px;
+    width: 40%;
+    margin: auto;
+    border: solid black 5px;
+}
+
+.votes{
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.make-vote-button{
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(63, 41, 90);;
+    cursor: pointer;
+}
+
+.make-vote-button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.vote-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.main-program{
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.new-vote{
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(40, 40, 55);
+    margin: auto;
+    width: 60%;
+    border: solid black 5px;
+}
+
+.button{
+    cursor: pointer;
+}
+
+.error{
+    color: red;
+}
+
+/* New Vote components */
+
+
+.new-vote-option{
+    margin: 10px;
+}
+
+.new-vote-div{
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(40, 40, 55);
+    margin: 10px;
+    width: 400px;
+    border: solid black 5px;
+}
+
+.new-vote-container{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.new-vote-button{
+    margin: 10px;
+    color: white;
+    background-color: rgb(63, 41, 90);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.new-vote-button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.new-delete-button{
+    margin: 10px;
+    color: white;
+    background-color: rgb(202, 26, 26);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}

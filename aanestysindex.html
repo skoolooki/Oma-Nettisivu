@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aanestysstyle.css">
+</head>
+<body>
+    <div class="login" id="login">
+        <h1 style="text-align: center;">Log in</h1>
+        <input type="text" id="name" placeholder="Username..." style="margin: 5px;">
+        <input type="password" id="password" placeholder="Password..." style="margin: 5px;">
+        <span class="error" id="error" style="display: none;">Wrong password or username</span>
+        <button id="submit" class="button" onclick="login()">Submit</button>
+    </div>
+    <div style="display: none;" class="main-program" id="main-program">
+        <button class="make-vote-button" id="logout" onclick="logout()">
+            Kirjaudu Ulos
+        </button>
+        <div class="new-vote" id="new-vote">
+            <h1 style="text-align: center;">Make new vote</h1>
+            <div class="vote" id="vote">
+                <div class="vote-container" id="vote-container">
+                    <p>Vote name: </p>
+                    <input type="text" id="vote-name">
+                </div>
+                <div class="vote-container" id="vote-container">
+                    <p>Option 1: </p>
+                    <input type="text" id="option1">
+                </div>
+                <div class="vote-container" id="vote-container">
+                    <p>Option 2: </p>
+                    <input type="text" id="option2">
+                </div>
+            </div>
+            <button class="make-vote-button" onclick="makeNewVote()">
+                Make vote
+            </button>
+        </div>
+        <div class="votes" id="votes">
+            
+        </div>
+    </div>
+</body>
+    <script src="aanestyskoodi.js"></script>
+</html>
